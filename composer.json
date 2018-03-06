@@ -1,0 +1,13 @@
+{
+  "authors": [
+    {
+      "name": "Grinderspro",
+      "email": "grinderspro@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Grinderspro\\Navigator\\": ""
+    }
+  }
+}

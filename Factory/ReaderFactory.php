@@ -13,11 +13,12 @@ use Grinderspro\Navigator\Reader\BinReader;
 
 class ReaderFactory
 {
+    const NAME_SPACE = 'Grinderspro\\Navigator\\Reader\\';
+
     public static function create($fileType)
     {
-        $nameSpace = 'Grinderspro\\Navigator\\Reader\\';
         $type = ucfirst($fileType);
-        $class = $nameSpace . $type.'Reader';
+        $class = self::NAME_SPACE . $type.'Reader';
         return new $class();
     }
 }

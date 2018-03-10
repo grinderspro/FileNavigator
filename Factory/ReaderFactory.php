@@ -15,15 +15,9 @@ class ReaderFactory
 {
     public static function create($fileType)
     {
-        switch ($fileType) {
-            case 'txt':
-                $reader = new TxtReader();
-                break;
-            case 'bin':
-                $reader = new BinReader();
-                break;
-        }
-
-        return $reader;
+        $nameSpace = 'Grinderspro\\Navigator\\Reader\\';
+        $type = ucfirst($fileType);
+        $class = $nameSpace . $type.'Reader';
+        return new $class();
     }
 }
